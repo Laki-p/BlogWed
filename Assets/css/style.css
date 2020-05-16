@@ -1,0 +1,92 @@
+/* table of content */
+/*e65496-fc77c0-f597d5-edbed8-ffffff*/
+/*
+1.Section Settings
+2.Section caousel
+3.Section Blog
+4.Section footer
+*/
+
+
+/* Section setting */
+html, body{
+    height: 100%;
+}
+
+.bg-alpha{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.border-short-bottom{
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 25px;
+}
+
+.border-short-bottom  ::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50%;
+    background: #566456;
+}
+
+/* Section Caousel */
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item .active {
+    height: 100%;
+}
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.backscreen {
+    background: rgba(0, 0,0, 0.5);
+    height: 100%;
+}
+
+.warpper-card-img{
+    position: relative;
+    padding-top: 96.25%;
+    overflow: hidden;
+}
+
+.warpper-card-img img{
+    position: absolute;
+    top: 0;
+
+}
+
+/* Section footer*/
+
+.semi-footer{
+    background-color: #edbed8;
+    color: #ffffff;
+}
+
+.semi-footer a{
+    color: #ffffff;
+}
+
+.semi-footer h4{
+    color: #e65496;
+    border-bottom: 1px solid;
+    padding: 10px 0;
+}
+
+.footer {
+    background-color: black;
+    color: #ffffff;
+    font-size: 0.7;
+    height: 90px;
+    line-height: 90px;   /*ใช่เฉพาะข้อความแถวเดียว*/
+}
