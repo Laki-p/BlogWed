@@ -1,162 +1,195 @@
-/* table of content */
-/*e65496-fc77c0-f597d5-edbed8-ffffff*/
-/*
-1.Section Settings
-2.Section caousel
-3.Section Blog
-4.Section footer
-5.Section Navbar
-6.Section page-title
-7.Section timeline
-8.Sectin star rating
-*/
 
 
-/* Section setting */
-html, body{
+html,
+body {
     height: 100%;
+    font-family: 'Prompt', sans-serif;
 }
 
-.bg-alpha{
-    background: rgba(0, 0, 0, 0.5);
+.bg-alpha {
+    background: rgba(0, 0, 0, 0.5)
 }
 
-.border-short-bottom{
+.border-short-bottom {
     position: relative;
     padding: 20px 0;
     margin-bottom: 25px;
 }
 
-.border-short-bottom  ::after {
+.border-short-bottom::after {
     position: absolute;
     content: "";
     width: 100px;
     height: 2px;
     bottom: 0;
     left: 50%;
-    margin-left: -50%;
-    background: #566456;
+    margin-left: -50px;
+    background: #595959;
 }
 
-/* Section Caousel */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Section Carousel */
+
 .carousel,
 .carousel-inner,
 .carousel-item,
-.carousel-item .active {
+.carousel-inner .active {
     height: 100%;
 }
+
 .carousel-img {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
+}
 
+.carousel-caption {
+    top: 40%;
 }
 
 .backscreen {
-    background: rgba(0, 0,0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     height: 100%;
 }
 
-.warpper-card-img{
+
+/* Section Blog */
+
+.warpper-card-img {
     position: relative;
-    padding-top: 96.25%;
     overflow: hidden;
 }
 
-.warpper-card-img img{
+.warpper-card-img::after {
+    content: '';
+    padding-top: 56.25%;
+    display: block;
+    height: 0;
+}
+
+.warpper-card-img img {
     position: absolute;
     top: 0;
-
+    transition: 1s;
 }
 
-/* Section footer*/
-
-.semi-footer{
-    background-color: #edbed8;
-    color: #ffffff;
+.warpper-card-img img:hover {
+    transform: scale(1.2)
 }
 
-.semi-footer a{
-    color: #ffffff;
+.btn-groug-custom button{
+    margin-bottom: 0.5rem;
+    width: 100px;
 }
 
-.semi-footer h4{
-    color: #e65496;
+
+/* Section Footer */
+
+.semi-footer {
+    background: #2b2b2b;
+    color: #dcdcdc;
+}
+
+.semi-footer a {
+    color: #dcdcdc;
+}
+
+.semi-footer h4 {
+    color: #75c6fc;
     border-bottom: 1px solid;
     padding: 10px 0;
 }
 
 .footer {
-    background-color: black;
-    color: #ffffff;
-    font-size: 0.7;
+    background: #000;
+    color: #fff;
+    font-size: 0.7rem;
     height: 90px;
-    line-height: 90px;   /*ใช่เฉพาะข้อความแถวเดียว*/
+    line-height: 90px;
+    text-align: center;
 }
 
-/* Section page-title*/
-.page-title {
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+
+/* Section Navbar */
+
+#navbar {
+    padding: 25px;
+    transition: 0.5s;
+}
+
+/* Section Page-title */
+.page-title{
     position: relative;
     display: block;
     padding-top: 250px;
     padding-bottom: 100px;
-    color: #ffffff;
-
+    color: #fff;
 }
 
-/* Section timeline*/
+/* Section Timeline */
+
 .timeline{
     list-style: none;
     position: relative;
-    padding: 20px 0 ;
+    padding: 20px 0;
 }
 
-.timeline > li {
+.timeline > li{
     position: relative;
     margin-bottom: 40px;
 }
 
-.timeline ::before{
+.timeline::before{
     position: absolute;
     content: " ";
     width: 2px;
-    background: #fc0505;
+    background: #e6e6e6;
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -1px;
 }
 
-li > .timeline-badge {
-     position: absolute;
-     width: 18px;
-     height: 18px;
-     border: 3px solid #ff0303;
-     left: 50%;
-     margin-left: -9%;
-     border-radius: 50%;
-     background: #ffffff;
-     box-shadow: 0 0 0 5px #ffffff;
-     top: 15px;
+li > .timeline-badge{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #84ba3f;
+    left: 50%;
+    margin-left: -9px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 5px #fff;
+    top: 15px;
 }
- 
-li > .timeline-badge ::before {
-    content: " " ;
+
+li > .timeline-badge::before{
+    content: "";
     position: absolute;
     top: 5px;
     right: 20px;
     width: 25px;
     height: 2px;
-    background: #555555;    
+    background: #e6e6e6;
 }
 
-li.inverted > .timeline-badge ::before {
+li.inverted > .timeline-badge::before{
     right: -32px;
-
 }
 
-li > .timeline-badge p {
+li > .timeline-badge p{
     width: 200px;
     margin-top: -9px;
     margin-left: 25px;
@@ -164,13 +197,13 @@ li > .timeline-badge p {
     font-weight: bold;
 }
 
-li.inverted > .timeline-badge p {
-   float: right;
-   text-align: right;
-   margin-right: 25px;
+li.inverted > .timeline-badge p{
+    float: right;
+    text-align: right;
+    margin-right: 25px;
 }
 
-li > .timeline-card {
+li > .timeline-card{
     position: relative;
     width: 46%;
     float: left;
@@ -178,62 +211,70 @@ li > .timeline-card {
     padding: 0 10px;
 }
 
-li.inverted > .timeline-card {
+li.inverted > .timeline-card{
     float: right;
     text-align: left;
 }
 
-.timeline > li ::after {
+.timeline > li::after{
     content: "";
-    clear: both ;
-    display: block;    
+    clear: both;
+    display: block;
 }
 
-.timeline-arrow {
+.timeline-arrow{
     width: 100%;
     text-align: center;
     bottom: -70px;
     color: #e6e6e6;
 }
 
-@media(max-width :768px ) {
-    .timeline ::before , 
+
+@media (max-width: 768px ){
+    .timeline::before,
     .timeline-badge{
         left: 40px !important;
     }
-    .timeline-badge ::before {
-        right: -32px !important; 
+    .timeline-badge::before{
+        right: -32px !important;
     }
-    .timeline-badge p ,
-    li.inverted > .timeline-badge p {
+    .timeline-badge p,
+    li.inverted > .timeline-badge p{
         margin-left: 50px !important;
         text-align: left;
         float: left;
     }
+
     li > .timeline-card{
         width: 100%;
         text-align: left;
-        padding:37px 0 0 50px;
+        padding: 37px 0 0 85px;
     }
+
     .timeline-arrow{
         text-align: left;
         left: 32px;
     }
+
 }
 
-/* Section star */
+/* Section Star */
 /* ☆★ */
-
-.star-rating {
+.star-rating{
     position: relative;
     font-size: 2em;
     color: gold;
-    display: inline-block\;  
+    display: inline-block;
 }
 
-.star-current {
+.star-current{
     position: absolute;
     top: 0;
     white-space: nowrap;
     overflow: hidden;
 }
+
+
+
+
+
