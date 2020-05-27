@@ -60,8 +60,12 @@
       <div class="row pb-4">  <!--pb ระยะห่างใต้ปุ่ม-->
         <div class="col-12 text-center">
           <div class="btn-group-custom">
-           <button class="btn btn-primary">All</button>
-           <button class="btn btn-primary">เสื้อ</button>
+            <a href="Blog.html?tag=all">  <!--php ?tag=all บอกให้รู้ว่าคือหมวดของทั้งหมด-->
+              <button class="btn btn-primary">All</button>
+            </a>
+            <a href="Blog.html?tag=เสื้อ">   <!-- php  บอกว่าหมวดเสื้อนะจ๊ะ-->
+               <button class="btn btn-primary">เสื้อ</button>
+            </a>
            <button class="btn btn-primary">กระโปรง</button>
            <button class="btn btn-primary">เดรส</button>
            <button class="btn btn-primary">รองเท้า</button>
@@ -72,15 +76,15 @@
       <div class="row">
         <section class="col  col-sm-6 col-md-4 col-lg-3 p-2" >
           <div class="card mb-4 h-100">
-            <a href="#" class="warpper-card-img">  <!--ตั้งค่าให้รูปขนาด16:9-->
-              <img src="Assets/image/img3.jpg" alt="...">
+            <a href="Blog-Detail.html?id=001" class="warpper-card-img">  <!--ตั้งค่าให้รูปขนาด16:9   ?id=001 เป็นคียของphpบอกไอดีดาต้าเบส-->
+              <img src="Assets/image/img4.jpg" alt="...">
             </a>
               <div class="card-body">
-                <h5 class="card-title">Lolita</h5>
+                <h5 class="card-title">Lolita Fashion</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
               <div class="p-3">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="Blog-Detail.html?id=001" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
       </section>
