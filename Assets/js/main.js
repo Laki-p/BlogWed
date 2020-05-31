@@ -17,10 +17,7 @@ $(window).scroll(function() {
     }
 })
 
- 
-$('.to-top').click(function (){
-    $('html, body').animate({scrollTop: '0px'}, 800);
-})
+
 
 var deck = [];
 
@@ -43,7 +40,7 @@ $(document).ready(function(){
     $('.owl-carousel').owlCarousel({
         loop :true,
         nav : false,  /* ลูกศรใต้รุปซ้ายขวา */
-        dots : true,  /* จุดนำทาง*/ */
+        dots : true,  /* จุดนำทาง*/ 
         responsive:{
             0:{
                 items:1,
@@ -58,3 +55,8 @@ $(document).ready(function(){
         }
     });
   });
+
+   
+$('.to-top').click(function (){
+    $('html, body').animate({scrollTop: '0px'}, 800);
+})
